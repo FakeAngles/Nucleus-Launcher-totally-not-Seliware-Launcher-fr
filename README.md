@@ -1,7 +1,7 @@
 # Nucleus-Launcher-totally-not-Seliware-Launcher-fr
 Rebuilt Seliware Launcher for Nucleus
 
-Guide - [https://youtu.be/461Pq4nxBCY](https://www.youtube.com/watch?v=461Pq4nxBCY)
+Guide - [[https://youtu.be/461Pq4nxBCY](https://www.youtube.com/watch?v=461Pq4nxBCY)](https://youtu.be/qLNosOgO1q8)  *Nu music. without gluing*
 
 Used instead of the original Roblox launcher, bloxtrap, fishtap and others. The roblox version will always be relevant for Nucleus
 
