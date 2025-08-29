@@ -208,6 +208,7 @@ namespace SeliwareLauncher
             {
                 foreach (RobloxFile robloxFile in robloxVersion.Files)
                 {
+                    if (!(robloxFile.Name == "RobloxPlayerInstaller.exe"))
                     {
                         Console.WriteLine("Downloading {0}...", robloxFile.Name);
                         string str = random.Next(100000000, 999999999).ToString();
