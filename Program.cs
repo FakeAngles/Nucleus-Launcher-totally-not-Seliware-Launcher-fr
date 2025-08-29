@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -208,7 +208,6 @@ namespace SeliwareLauncher
             {
                 foreach (RobloxFile robloxFile in robloxVersion.Files)
                 {
-                    if (!(robloxFile.Name == "WebView2RuntimeInstaller.zip"))
                     {
                         Console.WriteLine("Downloading {0}...", robloxFile.Name);
                         string str = random.Next(100000000, 999999999).ToString();
@@ -240,7 +239,7 @@ namespace SeliwareLauncher
                                 "-"
                             }, StringSplitOptions.RemoveEmptyEntries);
                             string text2 = Program.robloxDir;
-                            if (array.Length != 0 && robloxFile.Name != "RobloxApp.zip" && robloxFile.Name != "WebView2.zip" && robloxFile.Name != "content-platform-fonts.zip" && robloxFile.Name != "content-textures3.zip" && robloxFile.Name != "content-terrain.zip" && robloxFile.Name != "redist.zip")
+                            if (array.Length != 0 && robloxFile.Name != "RobloxApp.zip" && robloxFile.Name != "WebView2.zip" && robloxFile.Name != "WebView2RuntimeInstaller.zip" && robloxFile.Name != "content-platform-fonts.zip" && robloxFile.Name != "content-textures3.zip" && robloxFile.Name != "content-terrain.zip" && robloxFile.Name != "redist.zip")
                             {
                                 int num = 0;
                                 foreach (string text3 in array)
@@ -271,6 +270,10 @@ namespace SeliwareLauncher
                             else if (robloxFile.Name == "content-terrain.zip")
                             {
                                 text2 = Program.robloxDir + "/PlatformContent/pc/terrain";
+                            }
+                            else if (robloxFile.Name == "WebView2RuntimeInstaller.zip")
+                            {
+                                text2 =Program.robloxDir + "/WebView2RuntimeInstaller";
                             }
                             fastZip.ExtractZip(text, text2, FastZip.Overwrite.Always, (string g) => true, null, null, false, false);
                             File.Delete(text);
