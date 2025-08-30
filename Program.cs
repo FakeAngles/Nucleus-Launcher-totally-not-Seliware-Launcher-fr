@@ -254,10 +254,14 @@ namespace SeliwareLauncher
                                     {
                                         modifiedText3 = "textures";
                                     }
-                                    if (num++ != array.Length)
+                                    if (modifiedText3 == "luapackages")
                                     {
-                                        text2 = text2 + "/" + modifiedText3;
+                                        modifiedText3 = "LuaPackages";
                                     }
+                                    if (num++ != array.Length)
+                                        {
+                                            text2 = text2 + "/" + modifiedText3;
+                                        }
                                 }
                             }
                             else if (robloxFile.Name == "content-platform-fonts.zip")
@@ -274,7 +278,7 @@ namespace SeliwareLauncher
                             }
                             else if (robloxFile.Name == "WebView2RuntimeInstaller.zip")
                             {
-                                text2 =Program.robloxDir + "/WebView2RuntimeInstaller";
+                                text2 = Program.robloxDir + "/WebView2RuntimeInstaller";
                             }
                             fastZip.ExtractZip(text, text2, FastZip.Overwrite.Always, (string g) => true, null, null, false, false);
                             File.Delete(text);
